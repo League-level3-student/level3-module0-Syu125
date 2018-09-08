@@ -8,7 +8,21 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class _01_RobotRace {
 	//1. make a main method
-	
+	public static void main(String[] args) {
+		Random random = new Random();
+		int speed = random.nextInt(50);
+		Boolean run = true;
+		int x = 60;
+		Robot [] r = new Robot [5];
+		
+			
+				for(int i = 0; i < r.length; i++) {
+			r[i] = new Robot();
+			r[i].setX(x);
+			r[i].setY(500);
+			x += 120;
+				}
+				
 		//2. create an array of 5 robots.
 
 		//3. use a for loop to initialize the robots.
@@ -17,6 +31,13 @@ public class _01_RobotRace {
 	
 		//5. use another for loop to iterate through the array and make each robot move 
 	    //   a random amount less than 50.
+	while(true) {
+		for(int j = 0; j < r.length; j++) {
+			int y = 500 - speed;
+		r[j].setY(500);
+		speed = random.nextInt(50);
+	}
+	}
     	
 		//6. use a while loop to repeat step 5 until a robot has reached the top of the screen.
 
@@ -26,5 +47,5 @@ public class _01_RobotRace {
     	
 	    //9. make the robots race around a circular track.
 
-	
+	}
 }
